@@ -17,4 +17,12 @@ function reqHandler(req, res) {
 }
 const server = http.createServer(reqHandler);
 
-server.listen(3000);
+server.listen(3000, () => {
+    console.log("print the base, the main entrypoint of your application.");
+    console.log(__filename);
+
+    console.log(
+        "What is the Module name! inside your main entrypoint file reside.",
+    );
+    console.log(__dirname);
+});
