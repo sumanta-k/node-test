@@ -1,14 +1,20 @@
 const http = require("http");
 
-const server = http.createServer((req, res) => {
-    res.write("<!DOCTYPE>");
+/* creating a different function that will work as handler */
+function reqHandler(req, res) {
+    console.log(req);
+    res.write("<!DOCTYPE html>");
     res.write("<html>");
-    res.write("<head><meta charset='utf-8'>");
-    res.write("<body><h1>Hello World!</h1></body>");
+    res.write("<head>");
+    res.write("<meta charset='utf-8'>");
+    res.write("</head>");
+    res.write("<body>");
+    res.write("<h1>Hello From Homepage!</h1>");
+    res.write("</body>");
     res.write("</html>");
+    /* make sure to end your res.write() , cause your server is still thinking that you are still serving , and when you hit that URL you won't get anything cause , your server is still thinking that it is serving */
     res.end();
-
-    console.log(`Your server is running on port 3000`);
-});
+}
+const server = http.createServer(reqHandler);
 
 server.listen(3000);
