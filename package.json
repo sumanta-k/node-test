@@ -1,0 +1,23 @@
+{
+  "name": "node-test",
+  "version": "1.0.0",
+  "description": "To See the property of http and express in node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumanta-k/node-test.git"
+  },
+  "keywords": [
+    "http",
+    "express.js"
+  ],
+  "author": "sumanta kumar mohanta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sumanta-k/node-test/issues"
+  },
+  "homepage": "https://github.com/sumanta-k/node-test#readme"
+}
